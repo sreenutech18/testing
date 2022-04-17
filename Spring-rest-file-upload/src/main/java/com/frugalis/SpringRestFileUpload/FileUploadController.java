@@ -25,6 +25,7 @@ public class FileUploadController {
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	public @ResponseBody String handleFileUpload(@RequestParam(value = "file") MultipartFile file) throws IOException {
 
+		System.out.println("entered to handleFileUpload");
 		String fileExtension = getFileExtension(file);
 		String filename = getRandomString();
 
